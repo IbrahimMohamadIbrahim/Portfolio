@@ -250,7 +250,7 @@ export default function Certificates() {
                   <div className="absolute inset-0 bg-[#0077b6]/35 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-15">
                     <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-[#0077b6] shadow-lg shadow-black/20 group-hover:scale-105 transition-transform">
                       <Eye className="w-4 h-4 text-[#0077b6]" />
-                      <span>عرض الشهادة</span>
+                      <span>View Certificate</span>
                     </span>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ export default function Certificates() {
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs sm:text-sm font-bold text-[#0077b6] hover:bg-[#caf0f8] transition-colors cursor-pointer"
                   >
                     <Eye className="w-4 h-4" />
-                    <span>عرض الشهادة</span>
+                    <span>View Certificate</span>
                   </button>
 
                   <a
@@ -314,7 +314,7 @@ export default function Certificates() {
                     onClick={(e) => e.stopPropagation()}
                     className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#0077b6] hover:bg-[#03045e] text-white shadow-sm transition-all hover:scale-105"
                   >
-                    <span>فتح الملف (PDF)</span>
+                    <span>View PDF</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
@@ -419,7 +419,7 @@ export default function Certificates() {
                   }`}
                 >
                   <ImageIcon className="w-3.5 h-3.5" />
-                  <span>معاينة الصورة</span>
+                  <span>Image View</span>
                 </button>
 
                 {activeModalCert.link?.endsWith('.pdf') && (
@@ -433,7 +433,7 @@ export default function Certificates() {
                     }`}
                   >
                     <FileText className="w-3.5 h-3.5" />
-                    <span>مستند PDF مدمج</span>
+                    <span>Embedded PDF</span>
                   </button>
                 )}
               </div>
@@ -444,10 +444,10 @@ export default function Certificates() {
                     type="button"
                     onClick={() => setLightboxCert(activeModalCert)}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-[#0077b6] border border-[#90e0ef] hover:bg-[#caf0f8] transition-all cursor-pointer shadow-xs"
-                    title="تكبير الشهادة ملء الشاشة"
+                    title="Fullscreen Lightbox View"
                   >
                     <Maximize2 className="w-3.5 h-3.5" />
-                    <span className="hidden sm:inline">تكبير ملء الشاشة</span>
+                    <span className="hidden sm:inline">Fullscreen</span>
                   </button>
                 )}
 
@@ -455,10 +455,10 @@ export default function Certificates() {
                   href={getAssetUrl(activeModalCert.downloadUrl || activeModalCert.link)}
                   download
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-[#03045e] border border-[#90e0ef] hover:bg-[#caf0f8] transition-all cursor-pointer shadow-xs"
-                  title="تحميل الشهادة"
+                  title="Download Certificate"
                 >
                   <Download className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">تحميل</span>
+                  <span className="hidden sm:inline">Download</span>
                 </a>
               </div>
             </div>
@@ -480,7 +480,7 @@ export default function Certificates() {
                     <div className="absolute inset-0 bg-[#0077b6]/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-white text-[#0077b6] shadow-xl">
                         <Maximize2 className="w-4 h-4" />
-                        <span>انقر للعرض بالحجم الكامل (Lightbox)</span>
+                        <span>Click for Fullscreen Lightbox</span>
                       </span>
                     </div>
                   </div>
@@ -525,12 +525,12 @@ export default function Certificates() {
                     {copiedId ? (
                       <>
                         <Check className="w-3.5 h-3.5 text-emerald-600" />
-                        <span className="text-emerald-700">تم النسخ!</span>
+                        <span className="text-emerald-700">Copied!</span>
                       </>
                     ) : (
                       <>
                         <Copy className="w-3.5 h-3.5" />
-                        <span>نسخ الكود</span>
+                        <span>Copy ID</span>
                       </>
                     )}
                   </button>
@@ -562,7 +562,7 @@ export default function Certificates() {
                 onClick={() => setActiveModalCert(null)}
                 className="px-4 py-2.5 rounded-xl text-sm font-semibold text-[#5c768d] hover:text-[#03045e] hover:bg-[#caf0f8] transition-colors cursor-pointer"
               >
-                إغلاق
+                Close
               </button>
 
               <div className="flex items-center gap-2">
@@ -572,7 +572,7 @@ export default function Certificates() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-[#0077b6] hover:bg-[#03045e] text-white shadow-md shadow-[#0077b6]/20 transition-all hover:scale-105"
                 >
-                  <span>فتح ملف الشهادة الأصلي</span>
+                  <span>Open Official Document</span>
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -608,7 +608,7 @@ export default function Certificates() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white/15 hover:bg-white/25 text-white transition-all"
               >
-                <span>فتح الملف الكامل</span>
+                <span>Open Full Document</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
 
@@ -618,7 +618,7 @@ export default function Certificates() {
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-white/15 hover:bg-white/25 text-white transition-all"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>تحميل</span>
+                <span>Download</span>
               </a>
 
               <button
@@ -646,7 +646,7 @@ export default function Certificates() {
 
           {/* Lightbox Footer Hint */}
           <div className="text-center text-xs text-white/50 pt-2 z-10">
-            انقر في أي مكان في الخلفية أو اضغط Escape للإغلاق
+            Click anywhere outside or press Escape to close
           </div>
         </div>
       )}
