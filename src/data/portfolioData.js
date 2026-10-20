@@ -310,8 +310,8 @@ export const certificates = [
     date: "2026",
     credentialId: "CERT_000540",
     image: getAssetUrl('certificates/advanced-data-science-techtrek.jpg'),
-    link: getAssetUrl('certificates/advanced-data-science-techtrek.jpg'),
-    downloadUrl: getAssetUrl('certificates/advanced-data-science-techtrek.jpg'),
+    link: getAssetUrl('certificates/advanced-data-science-techtrek.pdf'),
+    downloadUrl: getAssetUrl('certificates/advanced-data-science-techtrek.pdf'),
     description: "Certificate of Professional Training awarded for successfully completing 140 hours of online professional training in Advanced Data Science offered by TechTrek in partnership with Alexandria University Faculty of Computer Science.",
     skills: ["Data Science", "Python", "Data Analysis", "Machine Learning", "Model Evaluation", "EDA"],
     badgeColor: "from-[#0077b6]/30 to-[#00b4d8]/20"

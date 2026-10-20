@@ -288,6 +288,14 @@ export default function AboutProject() {
                       <img
                         src={getAssetUrl(cert.image)}
                         alt={cert.title}
+                        onError={(e) => {
+                          const el = e.currentTarget;
+                          if (!el.dataset.fallback) {
+                            el.dataset.fallback = '1';
+                            const clean = (cert.image || '').replace(/^\/+/, '').replace(/^Portfolio\//, '');
+                            el.src = `${import.meta.env.BASE_URL}${clean}`;
+                          }
+                        }}
                         className="w-full h-full object-cover object-top"
                       />
                     </div>

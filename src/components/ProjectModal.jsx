@@ -70,6 +70,14 @@ export default function ProjectModal({ project, onClose }) {
             <img
               src={getAssetUrl(project.image)}
               alt={project.title}
+              onError={(e) => {
+                const el = e.currentTarget;
+                if (!el.dataset.fallback) {
+                  el.dataset.fallback = '1';
+                  const clean = (project.image || '').replace(/^\/+/, '').replace(/^Portfolio\//, '');
+                  el.src = `${import.meta.env.BASE_URL}${clean}`;
+                }
+              }}
               className="w-full h-full object-cover object-top"
             />
           </div>
