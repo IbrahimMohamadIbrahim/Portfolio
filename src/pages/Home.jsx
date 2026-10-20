@@ -23,13 +23,13 @@ import SectionHeader from '../components/SectionHeader';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from '../components/Icons';
-import { developer, services, projects, skillsData } from '../data/portfolioData';
+import { developer, services, projects, skillsData, getAssetUrl } from '../data/portfolioData';
 import userPhoto from '../assets/images/profile.png';
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeSkillCategory, setActiveSkillCategory] = useState('dataScience');
-  const [imgSrc, setImgSrc] = useState(userPhoto);
+  const [imgSrc, setImgSrc] = useState(developer.photo || userPhoto);
 
   const featuredProjects = projects.filter((p) => p.featured);
 
@@ -176,7 +176,13 @@ export default function Home() {
                   <img
                     src={imgSrc}
                     alt={developer.name}
-                    onError={() => setImgSrc('/images/profile.png')}
+                    onError={() => {
+                      if (imgSrc !== userPhoto) {
+                        setImgSrc(userPhoto);
+                      } else {
+                        setImgSrc(getAssetUrl('images/profile.png'));
+                      }
+                    }}
                     className="w-full h-full object-cover object-top rounded-full hover:scale-105 transition-transform duration-500"
                   />
                 </div>

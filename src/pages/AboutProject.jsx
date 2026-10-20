@@ -12,7 +12,7 @@ import {
   Award
 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
-import { aboutProjectDetails, developer, timeline, certificates } from '../data/portfolioData';
+import { aboutProjectDetails, developer, timeline, certificates, getAssetUrl } from '../data/portfolioData';
 
 export default function AboutProject() {
   const [activeTab, setActiveTab] = useState('project');
@@ -286,7 +286,7 @@ export default function AboutProject() {
                   {cert.image && (
                     <div className="h-36 w-full bg-[#03045e] overflow-hidden border-b border-[#90e0ef]">
                       <img
-                        src={cert.image}
+                        src={getAssetUrl(cert.image)}
                         alt={cert.title}
                         className="w-full h-full object-cover object-top"
                       />

@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
-import { certificates } from '../data/portfolioData';
+import { certificates, getAssetUrl } from '../data/portfolioData';
 
 const categories = ['All', 'Data & ML', 'Frontend & UI'];
 
@@ -173,7 +173,7 @@ export default function Certificates() {
               {cert.image && (
                 <div className="h-48 w-full relative overflow-hidden bg-[#03045e] border-b border-[#90e0ef]">
                   <img
-                    src={cert.image}
+                    src={getAssetUrl(cert.image)}
                     alt={cert.title}
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
@@ -237,7 +237,7 @@ export default function Certificates() {
                   </button>
 
                   <a
-                    href={cert.link}
+                    href={getAssetUrl(cert.link)}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#0077b6] hover:bg-[#03045e] text-white shadow-sm transition-all hover:scale-105"
@@ -334,7 +334,7 @@ export default function Certificates() {
             {activeModalCert.image && (
               <div className="w-full bg-[#03045e] border-b border-[#90e0ef] overflow-hidden max-h-80 flex items-center justify-center p-2">
                 <img
-                  src={activeModalCert.image}
+                  src={getAssetUrl(activeModalCert.image)}
                   alt={activeModalCert.title}
                   className="max-h-76 w-auto object-contain rounded-lg shadow-md"
                 />
@@ -382,7 +382,7 @@ export default function Certificates() {
               </button>
 
               <a
-                href={activeModalCert.link}
+                href={getAssetUrl(activeModalCert.link)}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-[#0077b6] hover:bg-[#03045e] text-white shadow-md shadow-[#0077b6]/20 transition-all hover:scale-105"

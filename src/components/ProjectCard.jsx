@@ -1,5 +1,6 @@
 import { ExternalLink, ArrowUpRight, Sparkles } from 'lucide-react';
 import { GithubIcon } from './Icons';
+import { getAssetUrl } from '../data/portfolioData';
 
 export default function ProjectCard({ project, onSelect }) {
   return (
@@ -8,7 +9,7 @@ export default function ProjectCard({ project, onSelect }) {
       {project.image ? (
         <div className="h-52 w-full relative overflow-hidden bg-[#03045e] border-b border-[#90e0ef]">
           <img
-            src={project.image}
+            src={getAssetUrl(project.image)}
             alt={project.title}
             className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
           />

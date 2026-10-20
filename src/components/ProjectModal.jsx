@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { X, ExternalLink, CheckCircle2, TrendingUp } from 'lucide-react';
 import { GithubIcon } from './Icons';
+import { getAssetUrl } from '../data/portfolioData';
 
 export default function ProjectModal({ project, onClose }) {
   useEffect(() => {
@@ -67,7 +68,7 @@ export default function ProjectModal({ project, onClose }) {
         {project.image && (
           <div className="w-full bg-[#03045e] border-b border-[#90e0ef] overflow-hidden max-h-72">
             <img
-              src={project.image}
+              src={getAssetUrl(project.image)}
               alt={project.title}
               className="w-full h-full object-cover object-top"
             />
