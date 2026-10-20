@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-navy: #03045e;
+  --color-ocean: #0077b6;
+  --color-cyan: #00b4d8;
+  --color-ice: #90e0ef;
+  --color-frost: #caf0f8;
+  --color-surface: #caf0f8;
+  --color-canvas: #f8fdff;
+}
+
+@layer base {
+  body {
+    background-color: #f8fdff;
+    color: #03045e;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Scrollbar styled for Coolors 03045e-0077b6-00b4d8-90e0ef-caf0f8 Palette */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fdff;
+}
+::-webkit-scrollbar-thumb {
+  background: #90e0ef;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0077b6;
+}

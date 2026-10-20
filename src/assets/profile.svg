@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients using palette: #6b9080, #a4c3b2, #cce3de, #eaf4f4, #f6fff8 -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#cce3de" stop-opacity="0.9"/>
+      <stop offset="55%" stop-color="#eaf4f4" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#f6fff8" stop-opacity="1"/>
+    </radialGradient>
+    
+    <linearGradient id="sageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80a595"/>
+      <stop offset="100%" stop-color="#6b9080"/>
+    </linearGradient>
+
+    <linearGradient id="jacketGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6b9080"/>
+      <stop offset="100%" stop-color="#4f6e61"/>
+    </linearGradient>
+
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fce8d5"/>
+      <stop offset="100%" stop-color="#ebd0b5"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#6b9080" flood-opacity="0.25"/>
+    </filter>
+
+    <clipPath id="avatarClip">
+      <rect x="0" y="0" width="600" height="600" rx="300"/>
+    </clipPath>
+  </defs>
+
+  <!-- Circular Outer Container -->
+  <g clip-path="url(#avatarClip)">
+    <!-- Base Canvas -->
+    <rect width="600" height="600" fill="#f6fff8"/>
+    <circle cx="300" cy="300" r="300" fill="url(#bgGlow)"/>
+
+    <!-- Subtle Sage Matrix Grid -->
+    <g stroke="#a4c3b2" stroke-width="1.5" opacity="0.35">
+      <line x1="100" y1="0" x2="100" y2="600"/>
+      <line x1="200" y1="0" x2="200" y2="600"/>
+      <line x1="300" y1="0" x2="300" y2="600"/>
+      <line x1="400" y1="0" x2="400" y2="600"/>
+      <line x1="500" y1="0" x2="500" y2="600"/>
+      <line x1="0" y1="150" x2="600" y2="150"/>
+      <line x1="0" y1="300" x2="600" y2="300"/>
+      <line x1="0" y1="450" x2="600" y2="450"/>
+    </g>
+
+    <!-- Glowing Accent Circles -->
+    <circle cx="300" cy="270" r="190" fill="none" stroke="#6b9080" stroke-width="3" stroke-dasharray="10 16" opacity="0.45"/>
+    <circle cx="300" cy="270" r="215" fill="none" stroke="#a4c3b2" stroke-width="4" opacity="0.6"/>
+
+    <!-- Shoulders & Jacket in Deep Sage -->
+    <path d="M 140 600 C 140 460, 210 420, 300 420 C 390 420, 460 460, 460 600 Z" fill="url(#jacketGrad)" filter="url(#shadow)"/>
+    <!-- Collar in Ice Mint & Celadon -->
+    <path d="M 245 425 L 300 490 L 355 425 C 335 440, 265 440, 245 425 Z" fill="#eaf4f4" opacity="0.95"/>
+    <path d="M 265 435 L 300 480 L 335 435 Z" fill="#6b9080"/>
+
+    <!-- Neck -->
+    <rect x="268" y="340" width="64" height="95" rx="14" fill="url(#skinGrad)"/>
+    <path d="M 268 395 C 290 410, 310 410, 332 395 L 332 435 L 268 435 Z" fill="#6b9080" opacity="0.15"/>
+
+    <!-- Head / Face -->
+    <ellipse cx="300" cy="270" rx="95" ry="115" fill="url(#skinGrad)" filter="url(#shadow)"/>
+
+    <!-- Modern Haircut in Deep Forest -->
+    <path d="M 200 240 C 195 160, 260 140, 300 140 C 350 140, 410 165, 405 240 C 395 210, 370 190, 300 190 C 235 190, 208 220, 200 240 Z" fill="#1b2e25"/>
+    <path d="M 205 220 C 235 170, 320 150, 395 180 C 405 155, 360 135, 305 135 C 240 135, 195 170, 205 220 Z" fill="#294537"/>
+
+    <!-- Smart Glasses in Sage Teal -->
+    <!-- Left Rim -->
+    <rect x="230" y="240" width="56" height="38" rx="10" fill="#eaf4f4" fill-opacity="0.5" stroke="#6b9080" stroke-width="4"/>
+    <!-- Right Rim -->
+    <rect x="314" y="240" width="56" height="38" rx="10" fill="#eaf4f4" fill-opacity="0.5" stroke="#6b9080" stroke-width="4"/>
+    <!-- Bridge -->
+    <line x1="286" y1="256" x2="314" y2="256" stroke="#6b9080" stroke-width="4"/>
+    <!-- Temples -->
+    <line x1="205" y1="250" x2="230" y2="252" stroke="#6b9080" stroke-width="3"/>
+    <line x1="370" y1="252" x2="395" y2="250" stroke="#6b9080" stroke-width="3"/>
+
+    <!-- Eyes -->
+    <ellipse cx="258" cy="258" rx="5" ry="6" fill="#1b2e25"/>
+    <circle cx="260" cy="256" r="2" fill="#ffffff"/>
+    <ellipse cx="342" cy="258" rx="5" ry="6" fill="#1b2e25"/>
+    <circle cx="344" cy="256" r="2" fill="#ffffff"/>
+
+    <!-- Eyebrows -->
+    <path d="M 230 230 Q 258 222 284 228" fill="none" stroke="#1b2e25" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M 316 228 Q 342 222 370 230" fill="none" stroke="#1b2e25" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Nose -->
+    <path d="M 297 270 Q 303 295 307 298 Q 295 302 291 298" fill="none" stroke="#cf9964" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Confident Smile -->
+    <path d="M 275 325 Q 300 348 325 325" fill="none" stroke="#8c502b" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 280 326 Q 300 342 320 326" fill="#ffffff" opacity="0.95"/>
+
+    <!-- Neatly Groomed Beard / Stubble -->
+    <path d="M 235 285 Q 240 365 300 375 Q 360 365 365 285 Q 355 350 300 358 Q 245 350 235 285 Z" fill="#1b2e25" opacity="0.25"/>
+
+    <!-- Modern Headphones in Soft Sage Mint -->
+    <path d="M 205 380 C 190 450, 410 450, 395 380" fill="none" stroke="#6b9080" stroke-width="12" stroke-linecap="round"/>
+    <!-- Headphone Pads -->
+    <rect x="180" y="340" width="34" height="60" rx="14" fill="#a4c3b2" stroke="#6b9080" stroke-width="3"/>
+    <rect x="386" y="340" width="34" height="60" rx="14" fill="#a4c3b2" stroke="#6b9080" stroke-width="3"/>
+
+    <!-- Floating Code / Tech Badges -->
+    <g transform="translate(70, 180)">
+      <rect width="90" height="32" rx="16" fill="#eaf4f4" stroke="#6b9080" stroke-width="1.8"/>
+      <text x="45" y="21" font-family="monospace" font-size="13" font-weight="bold" fill="#1b2e25" text-anchor="middle">&lt;React/&gt;</text>
+    </g>
+
+    <g transform="translate(440, 260)">
+      <rect width="95" height="32" rx="16" fill="#eaf4f4" stroke="#a4c3b2" stroke-width="1.8"/>
+      <text x="47" y="21" font-family="monospace" font-size="12" font-weight="bold" fill="#1b2e25" text-anchor="middle">Tailwind</text>
+    </g>
+  </g>
+
+  <!-- Outer Sage Ring -->
+  <circle cx="300" cy="300" r="294" fill="none" stroke="url(#sageGrad)" stroke-width="7"/>
+</svg>
