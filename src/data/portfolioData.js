@@ -96,7 +96,7 @@ export const projects = [
       "Anomaly detection pipeline to flag operational deviations before catastrophic failure occurs",
       "Interactive Streamlit control dashboard for real-time sensor parameter input and failure scoring"
     ],
-    demoUrl: "https://github.com/IbrahimMohamadIbrahim/industrial-predictive-maintenance",
+    demoUrl: "https://industrial-predictive-maintenance.streamlit.app/",
     githubUrl: "https://github.com/IbrahimMohamadIbrahim/industrial-predictive-maintenance",
     color: "from-[#0077b6]/20 via-[#00b4d8]/20 to-[#90e0ef]/10"
   },
@@ -119,7 +119,7 @@ export const projects = [
       "Interactive search bar and responsive navigation structure",
       "Fluid multi-device layout across mobile and desktop screens"
     ],
-    demoUrl: "https://github.com/IbrahimMohamadIbrahim/Cyborg-Company",
+    demoUrl: "https://ibrahimmohamadibrahim.github.io/Cyborg-Company/",
     githubUrl: "https://github.com/IbrahimMohamadIbrahim/Cyborg-Company",
     color: "from-[#03045e]/20 via-[#0077b6]/20 to-[#00b4d8]/10"
   },
@@ -142,7 +142,7 @@ export const projects = [
       "Structured section hierarchy (About, Portfolio, Services, Prices, Team, Contact)",
       "Ultra-lightweight pure CSS layout ensuring instant load times"
     ],
-    demoUrl: "https://github.com/IbrahimMohamadIbrahim/Professional-Website-Maker",
+    demoUrl: "https://ibrahimmohamadibrahim.github.io/Professional-Website-Maker/",
     githubUrl: "https://github.com/IbrahimMohamadIbrahim/Professional-Website-Maker",
     color: "from-[#0077b6]/20 via-[#03045e]/20 to-[#00b4d8]/10"
   }

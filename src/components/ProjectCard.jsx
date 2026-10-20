@@ -117,6 +117,7 @@ export default function ProjectCard({ project, onSelect }) {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                   className="p-2 rounded-xl bg-[#caf0f8] hover:bg-[#90e0ef] text-[#03045e] hover:text-[#0077b6] transition-colors border border-[#90e0ef]"
                   aria-label="GitHub Repository"
                   title="View Source Code"
@@ -129,9 +130,10 @@ export default function ProjectCard({ project, onSelect }) {
                   href={project.demoUrl}
                   target="_blank"
                   rel="noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                   className="p-2 rounded-xl bg-[#caf0f8] hover:bg-[#90e0ef] text-[#03045e] hover:text-[#0077b6] transition-colors border border-[#90e0ef]"
                   aria-label="Live Demo"
-                  title="Open Project"
+                  title="Open Live Demo"
                 >
                   <ExternalLink className="w-4 h-4" />
                 </a>

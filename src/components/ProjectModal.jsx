@@ -163,7 +163,7 @@ export default function ProjectModal({ project, onClose }) {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-[#0077b6] hover:bg-[#03045e] text-white shadow-md shadow-[#0077b6]/20 transition-all hover:scale-[1.02]"
               >
-                <span>View Project</span>
+                <span>Live Demo</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
             )}
